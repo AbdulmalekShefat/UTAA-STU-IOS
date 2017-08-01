@@ -19,4 +19,9 @@ class FoodViewController: UIViewController {
         
     }
 
+    @IBAction func openLeftMenu(_ sender: Any) {
+        
+        self.sideMenuViewController.presentLeftMenuViewController()
+        
+    }
 }

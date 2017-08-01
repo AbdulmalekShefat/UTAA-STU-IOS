@@ -19,4 +19,14 @@ class ScheduleViewController: UIViewController {
         
     }
 
+    //  MARK: Toolbar buttons
+    
+    @IBAction func openLeftMenu(_ sender: Any) {
+        self.sideMenuViewController.presentLeftMenuViewController()
+    }
+    
+    @IBAction func editSchedle(_ sender: Any) {
+    }
+    
+    
 }

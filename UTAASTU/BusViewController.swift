@@ -19,4 +19,7 @@ class BusViewController: UIViewController {
         
     }
 
+    @IBAction func showLeftMenu(_ sender: Any) {
+        self.sideMenuViewController.presentLeftMenuViewController()
+    }
 }

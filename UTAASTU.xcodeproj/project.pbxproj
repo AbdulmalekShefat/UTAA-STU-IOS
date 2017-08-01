@@ -10,12 +10,18 @@
 		0ADCA13A9E9F670D3EEC73BE /* Pods_UTAASTUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F16050792FBECE67BE94A6 /* Pods_UTAASTUUITests.framework */; };
 		46413A01B86187CB639A4F09 /* Pods_UTAASTUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC95372C9C04E564CF3CB80 /* Pods_UTAASTUTests.framework */; };
 		E27458001F26798400CD7BD6 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27457FF1F26798400CD7BD6 /* FirebaseHelper.swift */; };
+		E2767AFF1F30AE9E008CD120 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2767AFE1F30AE9E008CD120 /* ProfileViewController.swift */; };
+		E2767B011F30E1BC008CD120 /* CameraUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2767B001F30E1BC008CD120 /* CameraUtils.swift */; };
+		E28D44401F2CD564006AC251 /* DrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28D443F1F2CD564006AC251 /* DrawerTableViewCell.swift */; };
+		E28D44421F2CDF6B006AC251 /* DrawerSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28D44411F2CDF6B006AC251 /* DrawerSource.swift */; };
 		E28F59EC1F2A7E8700C547B3 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28F59EB1F2A7E8700C547B3 /* Utilities.swift */; };
 		E29841D31F2914DB00509437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29841D21F2914DB00509437 /* Assets.xcassets */; };
 		E29841D51F2917B400509437 /* BusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29841D41F2917B400509437 /* BusViewController.swift */; };
 		E29841D71F2917CB00509437 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29841D61F2917CB00509437 /* ScheduleViewController.swift */; };
 		E29841D91F2917DC00509437 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29841D81F2917DC00509437 /* FoodViewController.swift */; };
 		E29841DB1F2917EE00509437 /* GPAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29841DA1F2917EE00509437 /* GPAViewController.swift */; };
+		E2AC51011F2DEF3D00DC6FDE /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AC51001F2DEF3D00DC6FDE /* FirebaseConstants.swift */; };
+		E2AC51041F2DFFE500DC6FDE /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AC51031F2DFFE500DC6FDE /* ProfileData.swift */; };
 		E2B6B9481F276F2D00CFC585 /* UIColor+MaterialColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B9471F276F2C00CFC585 /* UIColor+MaterialColors.swift */; };
 		E2B6B94A1F277F1400CFC585 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B9491F277F1400CFC585 /* ProgressHUD.swift */; };
 		E2B6B94C1F27A24F00CFC585 /* CustomizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6B94B1F27A24E00CFC585 /* CustomizeView.swift */; };
@@ -58,12 +64,18 @@
 		BAC95372C9C04E564CF3CB80 /* Pods_UTAASTUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UTAASTUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6957B366036199049F81A10 /* Pods-UTAASTU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTAASTU.release.xcconfig"; path = "Pods/Target Support Files/Pods-UTAASTU/Pods-UTAASTU.release.xcconfig"; sourceTree = "<group>"; };
 		E27457FF1F26798400CD7BD6 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		E2767AFE1F30AE9E008CD120 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E2767B001F30E1BC008CD120 /* CameraUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUtils.swift; sourceTree = "<group>"; };
+		E28D443F1F2CD564006AC251 /* DrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerTableViewCell.swift; sourceTree = "<group>"; };
+		E28D44411F2CDF6B006AC251 /* DrawerSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerSource.swift; sourceTree = "<group>"; };
 		E28F59EB1F2A7E8700C547B3 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E29841D21F2914DB00509437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E29841D41F2917B400509437 /* BusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusViewController.swift; sourceTree = "<group>"; };
 		E29841D61F2917CB00509437 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		E29841D81F2917DC00509437 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		E29841DA1F2917EE00509437 /* GPAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPAViewController.swift; sourceTree = "<group>"; };
+		E2AC51001F2DEF3D00DC6FDE /* FirebaseConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
+		E2AC51031F2DFFE500DC6FDE /* ProfileData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		E2B6B9471F276F2C00CFC585 /* UIColor+MaterialColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MaterialColors.swift"; sourceTree = "<group>"; };
 		E2B6B9491F277F1400CFC585 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		E2B6B94B1F27A24E00CFC585 /* CustomizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizeView.swift; sourceTree = "<group>"; };
@@ -129,11 +141,11 @@
 		E27458011F2679CB00CD7BD6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				E27457FF1F26798400CD7BD6 /* FirebaseHelper.swift */,
 				E2B6B9471F276F2C00CFC585 /* UIColor+MaterialColors.swift */,
 				E2B6B9491F277F1400CFC585 /* ProgressHUD.swift */,
 				E2B6B94B1F27A24E00CFC585 /* CustomizeView.swift */,
 				E28F59EB1F2A7E8700C547B3 /* Utilities.swift */,
+				E2767B001F30E1BC008CD120 /* CameraUtils.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -170,6 +182,24 @@
 			name = GPACalculator;
 			sourceTree = "<group>";
 		};
+		E2AC50FF1F2DE97B00DC6FDE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E2AC51031F2DFFE500DC6FDE /* ProfileData.swift */,
+				E2767AFE1F30AE9E008CD120 /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		E2AC51021F2DFF0C00DC6FDE /* FirebaseHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				E27457FF1F26798400CD7BD6 /* FirebaseHelper.swift */,
+				E2AC51001F2DEF3D00DC6FDE /* FirebaseConstants.swift */,
+			);
+			name = FirebaseHelpers;
+			sourceTree = "<group>";
+		};
 		E2EFA2191F250BA40092D743 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				E2EFA2121F2501E10092D743 /* LeftMenuViewController.swift */,
+				E28D443F1F2CD564006AC251 /* DrawerTableViewCell.swift */,
+				E28D44411F2CDF6B006AC251 /* DrawerSource.swift */,
 			);
 			name = Drawer;
 			sourceTree = "<group>";
@@ -210,12 +242,12 @@
 		E2F076581F23D5E4005DDB2C = {
 			isa = PBXGroup;
 			children = (
+				F4EA20E4176EEDA488612926 /* Frameworks */,
+				9F025A8D627958ECD284455D /* Pods */,
+				E2F076621F23D5E5005DDB2C /* Products */,
 				E2F076631F23D5E5005DDB2C /* UTAASTU */,
 				E2F076781F23D5E5005DDB2C /* UTAASTUTests */,
 				E2F076831F23D5E5005DDB2C /* UTAASTUUITests */,
-				E2F076621F23D5E5005DDB2C /* Products */,
-				9F025A8D627958ECD284455D /* Pods */,
-				F4EA20E4176EEDA488612926 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,15 +264,17 @@
 		E2F076631F23D5E5005DDB2C /* UTAASTU */ = {
 			isa = PBXGroup;
 			children = (
-				E2EFA21C1F251D4F0092D743 /* root */,
-				E2F076681F23D5E5005DDB2C /* Main.storyboard */,
-				E2EFA2191F250BA40092D743 /* Login */,
-				E27458011F2679CB00CD7BD6 /* Utils */,
-				E2EFA21B1F251D300092D743 /* Tabs */,
-				E2EFA21A1F251D250092D743 /* Drawer */,
-				E29841D21F2914DB00509437 /* Assets.xcassets */,
-				E2F076701F23D5E5005DDB2C /* Info.plist */,
 				E2F076921F23D88B005DDB2C /* GoogleService-Info.plist */,
+				E2F076701F23D5E5005DDB2C /* Info.plist */,
+				E29841D21F2914DB00509437 /* Assets.xcassets */,
+				E2EFA21A1F251D250092D743 /* Drawer */,
+				E2AC51021F2DFF0C00DC6FDE /* FirebaseHelpers */,
+				E2EFA2191F250BA40092D743 /* Login */,
+				E2F076681F23D5E5005DDB2C /* Main.storyboard */,
+				E2AC50FF1F2DE97B00DC6FDE /* Profile */,
+				E2EFA21C1F251D4F0092D743 /* root */,
+				E2EFA21B1F251D300092D743 /* Tabs */,
+				E27458011F2679CB00CD7BD6 /* Utils */,
 			);
 			path = UTAASTU;
 			sourceTree = "<group>";
@@ -556,15 +590,21 @@
 			files = (
 				E2EFA2111F24FFFC0092D743 /* RootViewController.swift in Sources */,
 				E2F076651F23D5E5005DDB2C /* AppDelegate.swift in Sources */,
+				E2767B011F30E1BC008CD120 /* CameraUtils.swift in Sources */,
 				E28F59EC1F2A7E8700C547B3 /* Utilities.swift in Sources */,
+				E28D44421F2CDF6B006AC251 /* DrawerSource.swift in Sources */,
 				E2B6B94A1F277F1400CFC585 /* ProgressHUD.swift in Sources */,
 				E29841D71F2917CB00509437 /* ScheduleViewController.swift in Sources */,
+				E28D44401F2CD564006AC251 /* DrawerTableViewCell.swift in Sources */,
 				E2EFA2131F2501E10092D743 /* LeftMenuViewController.swift in Sources */,
+				E2AC51041F2DFFE500DC6FDE /* ProfileData.swift in Sources */,
+				E2767AFF1F30AE9E008CD120 /* ProfileViewController.swift in Sources */,
 				E2B6B94E1F27A8C700CFC585 /* AnimatedTabBarController.swift in Sources */,
 				E2B6B94C1F27A24F00CFC585 /* CustomizeView.swift in Sources */,
 				E29841DB1F2917EE00509437 /* GPAViewController.swift in Sources */,
 				E2B6B9481F276F2D00CFC585 /* UIColor+MaterialColors.swift in Sources */,
 				E29841D51F2917B400509437 /* BusViewController.swift in Sources */,
+				E2AC51011F2DEF3D00DC6FDE /* FirebaseConstants.swift in Sources */,
 				E29841D91F2917DC00509437 /* FoodViewController.swift in Sources */,
 				E2EFA2171F2502DE0092D743 /* LoginViewController.swift in Sources */,
 				E27458001F26798400CD7BD6 /* FirebaseHelper.swift in Sources */,
@@ -713,6 +753,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UTAASTU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.msl.UTAASTU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -726,6 +767,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UTAASTU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.msl.UTAASTU;
 				PRODUCT_NAME = "$(TARGET_NAME)";

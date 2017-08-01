@@ -45,10 +45,10 @@ func dayFormatter() -> DateFormatter {
 // MARK: ImageUtils
 
 func imageFromData(imageData: String, withBlock: (_ image: UIImage?) -> Void){
- 
+    
     var image: UIImage?
     
-    let decodedData = NSData(base64Encoded: imageData, options:     NSData.Base64DecodingOptions(rawValue: 0))
+    let decodedData = NSData(base64Encoded: imageData, options: NSData.Base64DecodingOptions(rawValue: 0))
 
     image = UIImage(data: decodedData! as Data)
     
@@ -58,20 +58,21 @@ func imageFromData(imageData: String, withBlock: (_ image: UIImage?) -> Void){
 
 extension UIImage {
     
-    var isPortrait:     Bool    {return size.height > size.width}
-    var isLandscape:     Bool    {return size.width > size.height}
-    var breadth:        CGFloat {return min(size.width, size.height)}
-    var breadthSize:    CGSize  {return CGSize(width: breadth, height: breadth)}
-    var breadthRect:    CGRect  {return CGRect(origin: .zero, size: breadthSize)}
-    var circleMask:     UIImage? {
+    var isPortrait:     Bool        { return size.height > size.width}
+    var isLandscape:    Bool        { return size.width > size.height}
+    var breadth:        CGFloat     { return min(size.width, size.height)}
+    var breadthSize:    CGSize      { return CGSize(width: breadth, height: breadth)}
+    var breadthRect:    CGRect      { return CGRect(origin: .zero, size: breadthSize)}
+    var circleMask:     UIImage? 	{
         
         UIGraphicsBeginImageContextWithOptions(breadthSize, false, scale)
         defer { UIGraphicsEndImageContext() }
         guard let cgImage = cgImage?.cropping(to: CGRect(origin: CGPoint(x: isLandscape ? floor((size.width - size.height)/2) : 0, y: isPortrait ? floor((size.height - size.width)/2) : 0), size: breadthSize)) else { return nil }
         UIBezierPath(ovalIn: breadthRect).addClip()
         UIImage(cgImage: cgImage).draw(in: breadthRect)
-        return UIGraphicsGetImageFromCurrentImageContext()
-    
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
     }
     
     func scaleImagetoSize(newSize: CGSize) -> UIImage {
@@ -91,10 +92,21 @@ extension UIImage {
         UIGraphicsBeginImageContext(newSize)
         draw(in: scaledImageRect)
         let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        
         UIGraphicsEndImageContext()
         
         return scaledImage!
         
+    }
+    
+    func imageWithColor(_ color: UIColor) -> UIImage? {
+        var image = withRenderingMode(.alwaysTemplate)
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        color.set()
+        image.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
     }
     
 }

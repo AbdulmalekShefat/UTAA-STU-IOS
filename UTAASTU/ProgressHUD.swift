@@ -15,13 +15,15 @@ class ProgressHUD: UIVisualEffectView {
             label.text = text
         }
     }
+    var color: UIColor?
     
     let activityIndictor: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
     let label: UILabel = UILabel()
     let blurEffect = UIBlurEffect(style: .light)
     let vibrancyView: UIVisualEffectView
     
-    init(text: String) {
+    init(text: String, color: UIColor = UIColor.MaterialColors.Accent.orange500) {
+        self.color = color
         self.text = text
         self.vibrancyView = UIVisualEffectView(effect: UIVibrancyEffect(blurEffect: blurEffect))
         super.init(effect: blurEffect)
@@ -37,9 +39,9 @@ class ProgressHUD: UIVisualEffectView {
     
     func setup() {
         contentView.addSubview(vibrancyView)
-        activityIndictor.color = UIColor.MaterialColors.Accent.orangeA700
+        activityIndictor.color = self.color
         contentView.addSubview(activityIndictor)
-        label.textColor = UIColor.MaterialColors.Accent.orangeA700
+        label.textColor = self.color
         contentView.addSubview(label)
         activityIndictor.startAnimating()
     }

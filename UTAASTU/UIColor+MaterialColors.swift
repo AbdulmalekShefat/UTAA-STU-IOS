@@ -37,6 +37,7 @@ extension UIColor {
             static let blue200 = UIColor(hex: "90CAF9")
             static let blue500 = UIColor(hex: "2196F3")
             static let blue700 = UIColor(hex: "1976D2")
+            static let blue900 = UIColor(hex: "0D47A1")
             static let blueA700 = UIColor(hex: "2962FF")
         }
         
@@ -49,7 +50,7 @@ extension UIColor {
         
         struct Accent {
             static let orange200 = UIColor(hex: "FFAB91")
-            static let orange500 = UIColor(hex: "FF5722")
+            static let orange500 = UIColor(hex: "FF9800")
             static let orange700 = UIColor(hex: "E64A19")
             static let orangeA700 = UIColor(hex: "DD2C00")
         }

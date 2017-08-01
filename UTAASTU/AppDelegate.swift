@@ -15,19 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+       
         FirebaseApp.configure()
         Database.database().isPersistenceEnabled = true
+        let usersRef = Database.database().reference().child(KUSERS)
+        usersRef.keepSynced(true)
         
-        
-//        do{
+//        do {
 //            try Auth.auth().signOut()
-//        }catch{
+//        } catch {
 //            print(error.localizedDescription)
 //        }
         
         
-        if Auth.auth().currentUser == nil{
+        if Auth.auth().currentUser == nil {
             //  start 'login' viewController
             
             window = UIWindow(frame: UIScreen.main.bounds)
@@ -38,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.makeKeyAndVisible()
             
         }
-        
         
         return true
     }

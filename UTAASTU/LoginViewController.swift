@@ -34,7 +34,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
         view.addGestureRecognizer(tapGesture)
         
-        progressHUD = ProgressHUD(text: "connecting... please wait")
+        progressHUD = ProgressHUD(text: "connecting... please wait", color: UIColor.MaterialColors.SignIn.redA700)
         progressHUD.hide()
         self.view.addSubview(progressHUD)
         
@@ -267,9 +267,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         confirmation.addAction(cancelAction)
         confirmation.addAction(okAction)
 
-        confirmation.view.tintColor = UIColor.MaterialColors.Accent.orangeA700
+        confirmation.view.tintColor = UIColor.MaterialColors.Accent.orange500
         self.present(confirmation, animated: true, completion: nil)
-        confirmation.view.tintColor = UIColor.MaterialColors.Accent.orangeA700
+        confirmation.view.tintColor = UIColor.MaterialColors.Accent.orange500
         
     }
     

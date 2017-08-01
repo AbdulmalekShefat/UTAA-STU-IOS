@@ -8,12 +8,15 @@
 
 import UIKit
 import RESideMenu
+import Firebase
 
 class RootViewController: RESideMenu {
+    
+    var window: UIWindow?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         // Do any additional setup after loading the view.
     }
     
