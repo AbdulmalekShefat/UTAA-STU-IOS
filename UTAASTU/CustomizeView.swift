@@ -11,13 +11,14 @@ import UIKit
 
 class CustomizeView {
 
-    class func dropShadow(layer: CALayer, radius: CGFloat = 4.0, height: Double = 0.5, width: Double = 0){
+    class func dropShadow(layer: CALayer, radius: CGFloat = 4.0, height: Double = 0.5, width: Double = 0, opacity: Float = 0.54){
         layer.masksToBounds = false
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.54
+        layer.shadowOpacity = opacity
         layer.shadowOffset = CGSize(width: width, height: height)
         layer.shadowRadius = radius
         layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
     }
 
     class func shakeView(view: UIView, autoreverses: Bool = true, duration: CFTimeInterval = 0.1, repeatCount: Float = 2){

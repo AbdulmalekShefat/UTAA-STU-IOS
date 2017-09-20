@@ -11,10 +11,10 @@ import Firebase
 import KRProgressHUD
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-   
+    
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-
+    
     @IBOutlet weak var loginImage: UIImageView!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -28,7 +28,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
@@ -123,11 +123,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return .default
     }
     
-    func didSignIn() {
+    func didSignIn(signUp: Bool = false) {
         progressHUD.hide()
         KRProgressHUD.showSuccess(withMessage: "Welcome :)")
-        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "RootViewController")
-        self.present(homeViewController!, animated: true, completion: nil)
+        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "RootViewController") as! RootViewController
+        homeViewController.showProfile = signUp
+        self.present(homeViewController, animated: true, completion: nil)
     }
     
     // MARK: Buttons
@@ -141,14 +142,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             confirmation.addTextField { (passTextField) in
                 passTextField.placeholder = "password"
                 passTextField.isSecureTextEntry = true
-                self.passTextField = passTextField                
+                self.passTextField = passTextField
             }
             let cancelAction = UIAlertAction(title: "cancel", style: .cancel){(action) in
                 
             }
             
             let okAction = UIAlertAction(title: "signup", style: .default){(action) in
-            
+                
                 if self.passTextField.text != self.passwordField.text {
                     KRProgressHUD.showError(withMessage: "passwords don't match")
                 }else{
@@ -167,15 +168,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                 KRProgressHUD.showError(withMessage: string)
                                 
                             }
+                            
                         }else{
                             
-                            self.didSignIn()
-                        
+                            self.didSignIn(signUp: true)
+                            
                         }
-                                    
+                        
                     }
                 }
-            
+                
             }
             
             confirmation.addAction(cancelAction)
@@ -186,7 +188,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             confirmation.view.tintColor = UIColor.MaterialColors.Accent.orangeA700
             
         }
-    
+        
     }
     
     
@@ -204,10 +206,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     self.progressHUD.hide()
                     
                     if let errorCode = AuthErrorCode(rawValue: (error?._code)!){
-                    
-                    let string: String = FirebaseHelper.error2String(error: errorCode)
-                    KRProgressHUD.showError(withMessage: string)
-                    
+                        
+                        let string: String = FirebaseHelper.error2String(error: errorCode)
+                        KRProgressHUD.showError(withMessage: string)
+                        
                     }
                 }else{
                     
@@ -217,7 +219,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
             }
         }
-    
+        
     }
     
     @IBAction func didForgetPassword(_ sender: Any) {
@@ -261,17 +263,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                 }
                 
-                }
             }
-
+        }
+        
         confirmation.addAction(cancelAction)
         confirmation.addAction(okAction)
-
+        
         confirmation.view.tintColor = UIColor.MaterialColors.Accent.orange500
         self.present(confirmation, animated: true, completion: nil)
         confirmation.view.tintColor = UIColor.MaterialColors.Accent.orange500
         
     }
     
-
+    
 }

@@ -16,14 +16,16 @@ class ProgressHUD: UIVisualEffectView {
         }
     }
     var color: UIColor?
+    var blockInteraction = true
     
     let activityIndictor: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
     let label: UILabel = UILabel()
     let blurEffect = UIBlurEffect(style: .light)
     let vibrancyView: UIVisualEffectView
     
-    init(text: String, color: UIColor = UIColor.MaterialColors.Accent.orange500) {
+    init(text: String, color: UIColor = UIColor.MaterialColors.Accent.orange500, block: Bool = true) {
         self.color = color
+        self.blockInteraction = block
         self.text = text
         self.vibrancyView = UIVisualEffectView(effect: UIVibrancyEffect(blurEffect: blurEffect))
         super.init(effect: blurEffect)
@@ -79,12 +81,16 @@ class ProgressHUD: UIVisualEffectView {
     
     func show() {
         self.isHidden = false
-        UIApplication.shared.beginIgnoringInteractionEvents()
+        if blockInteraction{
+            UIApplication.shared.beginIgnoringInteractionEvents()
+        }
     }
     
     func hide() {
         self.isHidden = true
-        UIApplication.shared.endIgnoringInteractionEvents()
+        if blockInteraction {
+            UIApplication.shared.endIgnoringInteractionEvents()
+        }
     }
     
 }

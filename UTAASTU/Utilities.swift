@@ -13,7 +13,7 @@ import UIKit
 
 private let dateFormat = "dd/MM/yyyy"
 private let timeFormat = "HH:mm"
-private let dayFormat  = "dd, MMM"
+private let dayFormat  = "dddd, dd MMM"
 
 func dateFormatter() -> DateFormatter {
     
@@ -106,6 +106,12 @@ extension UIImage {
         image.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
+        return image
+    }
+    
+    func screenshot(tableView: UITableView) -> UIImage{
+        var image = UIImage();
+        
         return image
     }
     

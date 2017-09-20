@@ -25,8 +25,12 @@
 		E27707E91F32535400F1EEDD /* ColorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27707E81F32535400F1EEDD /* ColorsTableViewCell.swift */; };
 		E27707EC1F3261E500F1EEDD /* ColorHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27707EB1F3261E500F1EEDD /* ColorHeaderTableViewCell.swift */; };
 		E27707EE1F32631000F1EEDD /* DayHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27707ED1F32631000F1EEDD /* DayHeaderTableViewCell.swift */; };
-		E282555A1F58583400E59F9A /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28255591F58583400E59F9A /* ProfileData.swift */; };
-		E282555C1F58585700E59F9A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E282555B1F58585700E59F9A /* ProfileViewController.swift */; };
+		E282555F1F5859DF00E59F9A /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E282555D1F5859DF00E59F9A /* ProfileData.swift */; };
+		E28255601F5859DF00E59F9A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E282555E1F5859DF00E59F9A /* ProfileViewController.swift */; };
+		E28255631F585A4300E59F9A /* ContactsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28255621F585A4300E59F9A /* ContactsItem.swift */; };
+		E28255651F585DBA00E59F9A /* GradeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28255641F585DBA00E59F9A /* GradeItem.swift */; };
+		E28255681F585F1800E59F9A /* MaterialItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28255671F585F1800E59F9A /* MaterialItem.swift */; };
+		E282556B1F58629100E59F9A /* SocialGroupsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E282556A1F58629100E59F9A /* SocialGroupsItem.swift */; };
 		E287BEC31F387D23007F90FD /* schedule.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E287BEC21F387D23007F90FD /* schedule.pdf */; };
 		E28AFA141F3341B700FE3965 /* ScheduleEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28AFA131F3341B700FE3965 /* ScheduleEditViewController.swift */; };
 		E28AFA161F33492700FE3965 /* ScheduleEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28AFA151F33492700FE3965 /* ScheduleEditTableViewCell.swift */; };
@@ -101,8 +105,12 @@
 		E27707E81F32535400F1EEDD /* ColorsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsTableViewCell.swift; sourceTree = "<group>"; };
 		E27707EB1F3261E500F1EEDD /* ColorHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		E27707ED1F32631000F1EEDD /* DayHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		E28255591F58583400E59F9A /* ProfileData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
-		E282555B1F58585700E59F9A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E282555D1F5859DF00E59F9A /* ProfileData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		E282555E1F5859DF00E59F9A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E28255621F585A4300E59F9A /* ContactsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsItem.swift; sourceTree = "<group>"; };
+		E28255641F585DBA00E59F9A /* GradeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeItem.swift; sourceTree = "<group>"; };
+		E28255671F585F1800E59F9A /* MaterialItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialItem.swift; sourceTree = "<group>"; };
+		E282556A1F58629100E59F9A /* SocialGroupsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialGroupsItem.swift; sourceTree = "<group>"; };
 		E287BEC21F387D23007F90FD /* schedule.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule.pdf; sourceTree = "<group>"; };
 		E28AFA131F3341B700FE3965 /* ScheduleEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleEditViewController.swift; sourceTree = "<group>"; };
 		E28AFA151F33492700FE3965 /* ScheduleEditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleEditTableViewCell.swift; sourceTree = "<group>"; };
@@ -222,6 +230,30 @@
 			name = cells;
 			sourceTree = "<group>";
 		};
+		E28255611F585A2400E59F9A /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				E28255621F585A4300E59F9A /* ContactsItem.swift */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		E28255661F585F0500E59F9A /* Materials */ = {
+			isa = PBXGroup;
+			children = (
+				E28255671F585F1800E59F9A /* MaterialItem.swift */,
+			);
+			name = Materials;
+			sourceTree = "<group>";
+		};
+		E28255691F58628300E59F9A /* SocialGroups */ = {
+			isa = PBXGroup;
+			children = (
+				E282556A1F58629100E59F9A /* SocialGroupsItem.swift */,
+			);
+			name = SocialGroups;
+			sourceTree = "<group>";
+		};
 		E28F59E71F2A7BA200C547B3 /* ServiceTimes */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				E29841DA1F2917EE00509437 /* GPAViewController.swift */,
+				E28255641F585DBA00E59F9A /* GradeItem.swift */,
 			);
 			name = GPACalculator;
 			sourceTree = "<group>";
@@ -263,8 +296,8 @@
 		E2AC50FF1F2DE97B00DC6FDE /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				E28255591F58583400E59F9A /* ProfileData.swift */,
-				E282555B1F58585700E59F9A /* ProfileViewController.swift */,
+				E282555D1F5859DF00E59F9A /* ProfileData.swift */,
+				E282555E1F5859DF00E59F9A /* ProfileViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -281,6 +314,9 @@
 		E2D7E0E81F5840390041BDE7 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				E28255691F58628300E59F9A /* SocialGroups */,
+				E28255661F585F0500E59F9A /* Materials */,
+				E28255611F585A2400E59F9A /* Contacts */,
 				E2D7E0E91F58404F0041BDE7 /* Exams */,
 			);
 			name = SideMenu;
@@ -693,13 +729,16 @@
 				E27707E51F321FA000F1EEDD /* UIPaddingLabel.swift in Sources */,
 				E2EFA2111F24FFFC0092D743 /* RootViewController.swift in Sources */,
 				E28AFA161F33492700FE3965 /* ScheduleEditTableViewCell.swift in Sources */,
+				E282556B1F58629100E59F9A /* SocialGroupsItem.swift in Sources */,
 				E28AFA141F3341B700FE3965 /* ScheduleEditViewController.swift in Sources */,
 				E2DFE50C1F5061B6007F5FF3 /* FoodItem.swift in Sources */,
 				E23591C01F35F3A700761F10 /* ColorsView.swift in Sources */,
 				E2F076651F23D5E5005DDB2C /* AppDelegate.swift in Sources */,
 				E2767B011F30E1BC008CD120 /* CameraUtils.swift in Sources */,
 				E23591BB1F35E00200761F10 /* ShadowTableViewCell.swift in Sources */,
+				E282555F1F5859DF00E59F9A /* ProfileData.swift in Sources */,
 				E23591C41F35F77800761F10 /* DayHeaderView.swift in Sources */,
+				E28255631F585A4300E59F9A /* ContactsItem.swift in Sources */,
 				E27493671F347151002797CA /* AddButtonTableViewCell.swift in Sources */,
 				E28F59EC1F2A7E8700C547B3 /* Utilities.swift in Sources */,
 				E28D44421F2CDF6B006AC251 /* DrawerSource.swift in Sources */,
@@ -707,11 +746,11 @@
 				E28AFA181F334CF700FE3965 /* UIPaddingTextField.swift in Sources */,
 				E29841D71F2917CB00509437 /* ScheduleViewController.swift in Sources */,
 				E27707E71F32217C00F1EEDD /* ScheduleTableViewCell.swift in Sources */,
+				E28255681F585F1800E59F9A /* MaterialItem.swift in Sources */,
 				E28D44401F2CD564006AC251 /* DrawerTableViewCell.swift in Sources */,
 				E27707EC1F3261E500F1EEDD /* ColorHeaderTableViewCell.swift in Sources */,
 				E2EFA2131F2501E10092D743 /* LeftMenuViewController.swift in Sources */,
 				E2D7E0EB1F58464A0041BDE7 /* ExamsViewController.swift in Sources */,
-				E282555A1F58583400E59F9A /* ProfileData.swift in Sources */,
 				E2B6B94E1F27A8C700CFC585 /* AnimatedTabBarController.swift in Sources */,
 				E2B6B94C1F27A24F00CFC585 /* CustomizeView.swift in Sources */,
 				E29841DB1F2917EE00509437 /* GPAViewController.swift in Sources */,
@@ -724,9 +763,10 @@
 				E27707DE1F3205A400F1EEDD /* LectureItem.swift in Sources */,
 				E2EFA2171F2502DE0092D743 /* LoginViewController.swift in Sources */,
 				E2D7E0E71F5840330041BDE7 /* ExamItem.swift in Sources */,
-				E282555C1F58585700E59F9A /* ProfileViewController.swift in Sources */,
 				E233B9B31F34AB2B00BCDE6E /* DatePickerUtils.swift in Sources */,
 				E2DFE50E1F5066F7007F5FF3 /* FoodTableViewCell.swift in Sources */,
+				E28255651F585DBA00E59F9A /* GradeItem.swift in Sources */,
+				E28255601F5859DF00E59F9A /* ProfileViewController.swift in Sources */,
 				E27458001F26798400CD7BD6 /* FirebaseHelper.swift in Sources */,
 				E27707EE1F32631000F1EEDD /* DayHeaderTableViewCell.swift in Sources */,
 			);

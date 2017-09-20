@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import KRProgressHUD
 
 class LeftMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -69,8 +70,7 @@ class LeftMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func initProfile(item: ProfileData){
         
-        userName.text = item.name
-        
+        userName.text = item.name == "" ? item.email : item.name
         
         if item.profilePicture == "" {
             
@@ -152,12 +152,10 @@ class LeftMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             break
         default:
             break
-        
+            
         }
-        
-        let cell = tableView.cellForRow(at: indexPath)?.contentView
-        
-        CustomizeView.ripple(view: cell!)
+            
+        self.sideMenuViewController.hideViewController()
         
     }
     

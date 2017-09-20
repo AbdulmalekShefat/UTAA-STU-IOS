@@ -18,15 +18,16 @@ class ProfileData {
     var birthDate: String
     var phoneNumber: String
     var profilePicture: String
+    var department: Int
     
-    init(birthDate: String = "", phoneNumber: String = "", profilePicture: String = "") {
+    init(name: String = "", birthDate: String = "", phoneNumber: String = "", profilePicture: String = "", department: Int = 0) {
         self.email = (Auth.auth().currentUser?.email!)!
         self.uid = (Auth.auth().currentUser?.uid)!
-        self.name = (Auth.auth().currentUser?.displayName)!
+        self.name = name
         self.birthDate = birthDate
         self.phoneNumber = phoneNumber
         self.profilePicture = profilePicture
-
+        self.department = department
     }
     
     init(dictionary: NSDictionary) {
@@ -36,13 +37,14 @@ class ProfileData {
         birthDate = dictionary[KUSERS_BIRTHDATE] as! String
         phoneNumber = dictionary[KUSERS_PHONE] as! String
         profilePicture = dictionary[KUSERS_PHOTO] as! String
+        department = dictionary[KUSERS_DEPARTMENT] as! Int
     }
     
     func item2Dic(item: ProfileData) -> NSDictionary {
         return NSDictionary(objects:
-            [item.name, item.email, item.birthDate, item.phoneNumber, item.profilePicture],
+            [item.name, item.email, item.birthDate, item.phoneNumber, item.profilePicture, item.department],
                             forKeys:
-            [KUSERS_NAME as NSCopying, KUSERS_EMAIL as NSCopying, KUSERS_BIRTHDATE as NSCopying, KUSERS_PHONE as NSCopying, KUSERS_PHOTO as NSCopying]
+            [KUSERS_NAME as NSCopying, KUSERS_EMAIL as NSCopying, KUSERS_BIRTHDATE as NSCopying, KUSERS_PHONE as NSCopying, KUSERS_PHOTO as NSCopying, KUSERS_DEPARTMENT as NSCopying]
         
         )
     }

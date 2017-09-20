@@ -12,7 +12,7 @@ import Firebase
 
 class RootViewController: RESideMenu {
     
-    var window: UIWindow?
+    var showProfile = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,14 @@ class RootViewController: RESideMenu {
         
         self.contentViewController = self.storyboard?.instantiateViewController(withIdentifier: "ContentViewController")
         self.leftMenuViewController = self.storyboard?.instantiateViewController(withIdentifier: "LeftMenuViewController")
+        
+        if showProfile{
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
+            self.present(controller, animated: true, completion: nil)
+            
+        }
         
     }
     
